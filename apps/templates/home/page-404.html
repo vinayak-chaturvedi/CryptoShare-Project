@@ -1,0 +1,64 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Error 404 {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block body_class %} contact-us {% endblock body_class %}
+
+{% block content %}
+
+  {% include "includes/navigation-light.html" %}
+
+  <header>
+    <div class="page-header section-height-85">
+      <div>
+        <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0" src="/static/assets/img/cloudupload.jpg">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 d-flex">
+            <div class="card card-body blur text-md-start  px-sm-5 shadow-lg mt-sm-5 py-sm-5">
+              <h2 class="text-dark mb-4">Your Data is Encrpyted and Uploaded Successfully.</h2>
+  
+              <p class="text-dark pe-md-5 me-md-5">
+                Link has been sent to {{name}}, Mobile Number {{phone}}
+                <br/>Use Token Number: XXXXFFFC for Further Reference.  
+              </p>
+              
+              <div class="buttons">
+                
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-rounded bg-gradient-primary mt-4">See Details</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out.
+              <br><br>
+              It’s like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn’t like pink because that’s for girls, or you’d instantly become a gay two-year-old.
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn bg-gradient-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+
+{% endblock javascripts %}
